@@ -33,7 +33,7 @@ CORS_ALLOWED_ORIGINS = [
 os.environ.get("FRONTEND_URL"),
 ]
 
-ROOT_URLCONF = 'loansapp.urls'
+ROOT_URLCONF = 'loan_app_backend.urls'
 
 TEMPLATES = [
     {
@@ -51,7 +51,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'loansapp.wsgi.application'
+WSGI_APPLICATION = 'loan_app_backend.wsgi.application'
 
 DATABASES = {
     'default': {
