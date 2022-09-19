@@ -177,7 +177,7 @@ def calculate_repayment(loan_amount, loan_term, interest_rate_percentage, loan_m
         repayment_list.append(RepaymentSchedule(
             loan_id = loan,
             payment_no = x,
-            date =  datetime(loan_year, int(loan_month), 1) + relativedelta.relativedelta(months=x),
+            date =  datetime(int(loan_year), int(loan_month), 1) + relativedelta.relativedelta(months=x),
             payment_amount = pmt,
             principal = principal,
             interest = monthly_interest,
