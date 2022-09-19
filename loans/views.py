@@ -32,7 +32,7 @@ def get_listings_or_add_new_loan(request):
                 loan_term_int = int(request.data['loan_term'])
                 interest_rate_int = float(request.data['interest_rate'])
                 loan_month = request.data['loan_month']
-                loan_year = request.data['loan_year']
+                loan_year = str(request.data['loan_year'])
                 new_loan = LoanList(
                     loan_amount = loan_amount_int, 
                     loan_term = loan_term_int, 
@@ -86,7 +86,7 @@ def get_modifiy_delete_loan(request, pk):
                 loan_term_int = int(request.data['loan_term'])
                 interest_rate_int = float(request.data['interest_rate'])
                 loan_month = request.data['loan_month']
-                loan_year = request.data['loan_year']
+                loan_year = str(request.data['loan_year'])
                 LoanList.objects.filter(id=pk).update(
                     loan_amount = loan_amount_int, 
                     loan_term = loan_term_int, 
